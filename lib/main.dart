@@ -51,7 +51,7 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
   List<String> thriller = const  [
     "Joker",
     "The Da Vinci Code",
-    "The Hunger Games: Mockingjay",
+    "The Hunger Games",
     "Inception"
   ];
 
@@ -82,7 +82,7 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
   List<String> comedyMovieImage = const  [
     "spinalTap.jpeg",
     "airplane.jpg",
-     "AnnieHall.jpeg",
+    "AnnieHall.jpeg",
     "theJerk.jpg"
   ];
 
@@ -98,7 +98,7 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
   List<String> Fantasy = const  [
     "THE FALL",
     "SOLOMON KANE",
-    "CONAN THE BARBARIAN"
+    "CONAN ",
     "THE FORBIDDEN KINGDOM"
   ];
 
@@ -138,7 +138,6 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
   ];
 
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold (
@@ -164,6 +163,8 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
             ),
           ),
           SliverPadding(padding: EdgeInsets.all(0.5) ),
+
+
           Header(Colors.lightGreen, "Science Fiction",),
           SliverList(
               delegate: SliverChildBuilderDelegate(
@@ -202,7 +203,7 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
 
                              child: ListTile(
                                contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                               leading: _buildLeadingTile(index),
+                               leading: _buildLeadingTile(index, scifiMoviesImage ),
 
 
                                title: Padding(
@@ -232,13 +233,303 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
        },
          childCount: 1,
     )),
+
+
+
+          Header(Colors.grey, "Thriller",),
+          SliverList(
+              delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index){
+                  return Container(
+                      padding: EdgeInsets.all(1),
+                      height: 200,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: thriller.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            width: 320,
+                            height: 180,
+                            margin: EdgeInsets.all(2.0),
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey,
+                                    spreadRadius: 6,
+                                    blurRadius: 11,
+                                  ),
+                                ],
+                                border: Border.all(
+                                    color: Colors.grey,
+                                    width: 2.5
+                                ),
+                                borderRadius: BorderRadius.circular(25.0)
+                            ),
+
+                            child: GestureDetector (
+                              onLongPressStart: (LongPressStartDetails details){
+                                _popup(details.globalPosition, thriller, index, thriller[index]);
+                              },
+
+                              child: ListTile(
+                                contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                                leading: _buildLeadingTile(index, thrillerMovieImage),
+
+
+                                title: Padding(
+                                  padding: const EdgeInsets.only(bottom: .0),
+                                  child: Text(thriller[index],
+                                    style: TextStyle(color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30
+                                    ),
+                                  ),
+                                ),
+                                subtitle: Text(thrillerMoviesSubtitle[index],
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                                trailing: Icon(
+                                  Icons.favorite_border_outlined,
+                                  color: Colors.pink,
+                                  size: 24.0,
+                                ),
+                              )
+                              ,),);
+
+                        },));
+                },
+                childCount: 1,
+              )),
+
+
+
+
+
+          Header(Colors.indigo, "Comedy",),
+          SliverList(
+              delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index){
+                  return Container(
+                      padding: EdgeInsets.all(1),
+                      height: 200,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: comedy.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            width: 320,
+                            height: 180,
+                            margin: EdgeInsets.all(2.0),
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.indigo,
+                                    spreadRadius: 6,
+                                    blurRadius: 11,
+                                  ),
+                                ],
+                                border: Border.all(
+                                    color: Colors.indigo,
+                                    width: 2.5
+                                ),
+                                borderRadius: BorderRadius.circular(25.0)
+                            ),
+
+                            child: GestureDetector (
+                              onLongPressStart: (LongPressStartDetails details){
+                                _popup(details.globalPosition, comedy, index, comedy[index]);
+                              },
+
+                              child: ListTile(
+                                contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                                leading: _buildLeadingTile(index, comedyMovieImage),
+
+
+                                title: Padding(
+                                  padding: const EdgeInsets.only(bottom: .0),
+                                  child: Text(comedy[index],
+                                    style: TextStyle(color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30
+                                    ),
+                                  ),
+                                ),
+                                subtitle: Text(comedyMovieSubTitle[index],
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                                trailing: Icon(
+                                  Icons.favorite_border_outlined,
+                                  color: Colors.pink,
+                                  size: 24.0,
+                                ),
+                              )
+                              ,),);
+
+                        },));
+                },
+                childCount: 1,
+              )),
+
+
+
+
+          Header(Colors.blueGrey, "Fantasy",),
+          SliverList(
+              delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index){
+                  return Container(
+                      padding: EdgeInsets.all(1),
+                      height: 200,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: Fantasy.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            width: 320,
+                            height: 180,
+                            margin: EdgeInsets.all(2.0),
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.blueGrey,
+                                    spreadRadius: 6,
+                                    blurRadius: 11,
+                                  ),
+                                ],
+                                border: Border.all(
+                                    color: Colors.blueGrey,
+                                    width: 2.5
+                                ),
+                                borderRadius: BorderRadius.circular(25.0)
+                            ),
+
+                            child: GestureDetector (
+                              onLongPressStart: (LongPressStartDetails details){
+                                _popup(details.globalPosition, Fantasy, index, Fantasy[index]);
+                              },
+
+                              child: ListTile(
+                                contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                                leading: _buildLeadingTile(index, FantasyMovieImage),
+
+
+                                title: Padding(
+                                  padding: const EdgeInsets.only(bottom: .0),
+                                  child: Text(Fantasy[index],
+                                    style: TextStyle(color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30
+                                    ),
+                                  ),
+                                ),
+                                subtitle: Text(FantasyMovieSubtitle[index],
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                                trailing: Icon(
+                                  Icons.favorite_border_outlined,
+                                  color: Colors.pink,
+                                  size: 24.0,
+                                ),
+                              )
+                              ,),);
+
+                        },));
+                },
+                childCount: 1,
+              )),
+
+
+
+
+          Header(Colors.cyanAccent, "Romance",),
+          SliverList(
+              delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index){
+                  return Container(
+                      padding: EdgeInsets.all(1),
+                      height: 200,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount:  Romance.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(
+                            width: 320,
+                            height: 180,
+                            margin: EdgeInsets.all(2.0),
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.cyanAccent,
+                                    spreadRadius: 6,
+                                    blurRadius: 11,
+                                  ),
+                                ],
+                                border: Border.all(
+                                    color: Colors.cyanAccent,
+                                    width: 2.5
+                                ),
+                                borderRadius: BorderRadius.circular(25.0)
+                            ),
+
+                            child: GestureDetector (
+                              onLongPressStart: (LongPressStartDetails details){
+                                _popup(details.globalPosition,  Romance, index,  Romance[index]);
+                              },
+
+                              child: ListTile(
+                                contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                                leading: _buildLeadingTile(index,  RomanceMovieImage),
+
+
+                                title: Padding(
+                                  padding: const EdgeInsets.only(bottom: .0),
+                                  child: Text(Romance[index],
+                                    style: TextStyle(color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 30
+                                    ),
+                                  ),
+                                ),
+                                subtitle: Text( RomanceMovieSubtitle[index],
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                                trailing: Icon(
+                                  Icons.favorite_border_outlined,
+                                  color: Colors.pink,
+                                  size: 24.0,
+                                ),
+                              )
+                              ,),);
+
+                        },));
+                },
+                childCount: 1,
+              )),
+
+
         ],
       )
     );
   }
 
 
-  Widget _buildLeadingTile(index) {
+  Widget _buildLeadingTile(index, List movies) {
     return Container(
       padding: EdgeInsets.only(right: 0.0),
       width: 85,
@@ -249,10 +540,10 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
       child: Container(
         width: 100,
         height:400,
-        child:  Image(image: AssetImage('images/${scifiMoviesImage[index]}')),
+        child:  Image(image: AssetImage('images/${movies[index]}')),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/${scifiMoviesImage[index]}'),
+            image: AssetImage('images/${movies[index]}'),
             fit: BoxFit.contain,
           ),
         ),
