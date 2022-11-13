@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "November Movies",
       home: Sliver(),
     );
   }
@@ -87,79 +86,56 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
     "theJerk.jpg"
   ];
 
-
   List<String> comedyMovieSubTitle = const  [
-
+    "\"This Is Spinal Tap\" shines a light on the self-contained universe of a metal band struggling to get back on the charts, including everything from its complicated history of ups and downs",
+    "This spoof comedy takes shots at the slew of disaster movies that were released in the 70s",
+    "Comedian Alvy Singer (Woody Allen) examines the rise and fall of his relationship with struggling nightclub singer Annie Hall (Diane Keaton)",
+    "Navin (Steve Martin) believes he was born a poor black child in Mississippi. He is, however, actually white. Upon figuring this out, he heads north to St. Louis to find himself"
   ];
 
 
 
   List<String> Fantasy = const  [
-
+    "THE FALL",
+    "SOLOMON KANE",
+    "CONAN THE BARBARIAN"
+    "THE FORBIDDEN KINGDOM"
   ];
 
   List<String> FantasyMovieImage = const  [
-
+    "Fall.jpeg",
+    "solomon.webp",
+     "conan.jpg",
+    "forbiddenkingdom.jpeg"
   ];
 
   List<String> FantasyMovieSubtitle = const  [
-
+    "For best friends Becky and Hunter, life is all about conquering fears and pushing limits. However, after they climb 2,000 feet to the top of a remote, abandoned radio tower, they find themselves stranded with no way down.",
+    "David's son (Ben Cross) inherits his father's kingdom of Israel and gains respect for his wisdom and sense of justice.",
+    "Orphaned boy Conan (Arnold Schwarzenegger) is enslaved after his village is destroyed by the forces of vicious necromancer Thulsa Doom (James Earl Jones), and is compelled to push \"The Wheel of Pain\" for many years.",
+    "While rummaging around for some bootleg kung-fu DVDs in a pawn shop in Boston's Chinatown, Jason discovers an ancient golden staff"
   ];
 
   List<String> Romance = const  [
-
+  "The Notebook",
+   "Love Jones",
+    "Casablanca",
+    "Pride & Prejudice"
   ];
 
   List<String> RomanceMovieImage = const  [
-
+    "notebook.jpeg",
+    "loveJones.jpeg",
+    "casblanca.webp",
+    "prideP.jpeg"
   ];
 
   List<String> RomanceMovieSubtitle = const  [
-
+    "In 1940s South Carolina, mill worker Noah Calhoun (Ryan Gosling) and rich girl Allie (Rachel McAdams) are desperately in love. But her parents don't approve",
+    "Two urban African-Americans, Darius (Larenz Tate), an aspiring writer, and Nina (Nia Long), an aspiring photographer, share an instant connection after a chance meeting at a Chicago club",
+    "Rick Blaine (Humphrey Bogart), who owns a nightclub in Casablanca, discovers his old flame Ilsa (Ingrid Bergman) is in town with her husband, Victor Laszlo (Paul Henreid).",
+    "A story of love and life among the landed English gentry during the Georgian era. Mr. Bennet is a gentleman living in Hertfordshire with his overbearing wife and five daughters..."
   ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
