@@ -103,9 +103,6 @@ class Details extends StatelessWidget {
       moonFall["overview"] =  "A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.";
     }
 
-
-
-
     if(Name == "The Da Vinci Code"){
       moonFall['image'] = "davinci.jpeg";
       moonFall['MovieName']=  "The Da Vinci Code";
@@ -123,7 +120,6 @@ class Details extends StatelessWidget {
       moonFall["director"] = "Ron Howard";
       moonFall["overview"] =  "A murder inside the Louvre, and clues in Da Vinci paintings, lead to the discovery of a religious mystery protected by a secret society for two thousand years, which could shake the foundations of Christianity.";
     }
-
     if(Name == "The Hunger Games"){
       moonFall['image'] = "hunger_games.webp";
       moonFall['MovieName']=  "The  Hunger Games";
@@ -133,7 +129,7 @@ class Details extends StatelessWidget {
       moonFall['actor2']=  "Josh Hutcherson";
       moonFall['actor3']= "Liam Hemsworth";
       moonFall['actor1Image']= "jennifer.jpg";
-      moonFall['actor2Image']= "josh.jpeg";
+      moonFall['actor2Image']= "Josh.jpg";
       moonFall['actor3Image']= "Liam.jpg";
       moonFall['time']= '2h 22m';
       moonFall["revenue"] = "\$45.3 million";
@@ -141,7 +137,6 @@ class Details extends StatelessWidget {
       moonFall["director"] = "Gary Ross";
       moonFall["overview"] =  "Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games: a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death.";
     }
-
     if(Name == "Inception"){
       moonFall['image'] = "inception.jpeg";
       moonFall['MovieName']=  "Inception";
@@ -151,7 +146,7 @@ class Details extends StatelessWidget {
       moonFall['actor2']=  "Joseph Gordon-Levitt";
       moonFall['actor3']= "Elliot Page";
       moonFall['actor1Image']= "Leo.jpg";
-      moonFall['actor2Image']= "Joseph.jpeg";
+      moonFall['actor2Image']= "Joseph.jpg";
       moonFall['actor3Image']= "Elliot.jpg";
       moonFall['time']= '2h 28m';
       moonFall["revenue"] = "\$45.3 million";
@@ -160,22 +155,22 @@ class Details extends StatelessWidget {
       moonFall["overview"] =  "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.";
     }
 
-    if(Name == "This Is Spinal Tap"){
+    if(Name == "This Is Spinal Tap") {
       moonFall['image'] = "spinalTap.jpeg";
-      moonFall['MovieName']=  "This Is Spinal Tap";
-      moonFall['MovieLength'] =  "1h 31m";
-      moonFall['Rating']= 5.7;
-      moonFall['actor1']= "Teo Halm";
-      moonFall['actor2']=  "Ella Wahlesdt";
-      moonFall['actor3']= "Reese Hartwig";
-      moonFall['actor1Image']= "teo.jpg";
-      moonFall['actor2Image']= "Ella.jpeg";
-      moonFall['actor3Image']= "Resse.jpg";
-      moonFall['time']= '1h 31m';
+      moonFall['MovieName'] = "This Is Spinal Tap";
+      moonFall['MovieLength'] = "1h 22m";
+      moonFall['Rating'] = 7.9;
+      moonFall['actor1'] = "Rob Reiner";
+      moonFall['actor2'] = "Michael Mckean";
+      moonFall['actor3'] = "Christopher Guest";
+      moonFall['actor1Image'] = "rob.jpg";
+      moonFall['actor2Image'] = "michael.jpg";
+      moonFall['actor3Image'] = "Christpher.jpg";
+      moonFall['time'] = '1h 22m';
       moonFall["revenue"] = "\$45.3 million";
-      moonFall["watch"] = "Hulu";
-      moonFall["director"] = "Dave Green";
-      moonFall["overview"] =  "After a construction project begins in their neighborhood, best friends Tuck (Brian \"Astro\" Bradley), Alex (Teo Halm) and Munch (Reese C. Hartwig) begin receiving strange, encoded messages on their cell phones. They immediately inform their parents and the authorities, but when no one takes them seriously, the youths decide to crack the code themselves and trace the messages to their source. The youths' curiosity leads them to a robotic extraterrestrial who desperately needs their help.";
+      moonFall["watch"] = "Pluto TV";
+      moonFall["director"] = "Rob Reiner";
+      moonFall["overview"] = "Spinal Tap, one of England's loudest bands, is chronicled by film director Marty DiBergi on what proves to be a fateful tour";
     }
 
 
@@ -183,74 +178,76 @@ class Details extends StatelessWidget {
     if(Name == "Airplane!"){
       moonFall['image'] = "airplane.jpg";
       moonFall['MovieName']=  "Airplane!";
-      moonFall['MovieLength'] =  "1h 31m";
-      moonFall['Rating']= 5.7;
-      moonFall['actor1']= "Teo Halm";
-      moonFall['actor2']=  "Ella Wahlesdt";
-      moonFall['actor3']= "Reese Hartwig";
-      moonFall['actor1Image']= "teo.jpg";
-      moonFall['actor2Image']= "Ella.jpeg";
-      moonFall['actor3Image']= "Resse.jpg";
-      moonFall['time']= '1h 31m';
+      moonFall['MovieLength'] =  "1h 28m";
+      moonFall['Rating']= 7.7;
+      moonFall['actor1']= "Robert Hays";
+      moonFall['actor2']=  "Julie Hagerty";
+      moonFall['actor3']= "Leslie Nielsen";
+      moonFall['actor1Image']= "RobertT.jpg";
+      moonFall['actor2Image']= "Julie.jpg";
+      moonFall['actor3Image']= "Leslie.jpg";
+      moonFall['time']= '1h 28m';
       moonFall["revenue"] = "\$45.3 million";
-      moonFall["watch"] = "Hulu";
-      moonFall["director"] = "Dave Green";
-      moonFall["overview"] =  "After a construction project begins in their neighborhood, best friends Tuck (Brian \"Astro\" Bradley), Alex (Teo Halm) and Munch (Reese C. Hartwig) begin receiving strange, encoded messages on their cell phones. They immediately inform their parents and the authorities, but when no one takes them seriously, the youths decide to crack the code themselves and trace the messages to their source. The youths' curiosity leads them to a robotic extraterrestrial who desperately needs their help.";
+      moonFall["watch"] = "HBO Max";
+      moonFall["director"] = "Jim Abrahams";
+      moonFall["overview"] =  "A man afraid to fly must ensure that a plane lands safely after the pilots become sick.";
+
     }
 
 
     if(Name == "Annie Hall"){
       moonFall['image'] = "AnnieHall.jpeg";
       moonFall['MovieName']=  "Annie Hall";
-      moonFall['MovieLength'] =  "1h 31m";
-      moonFall['Rating']= 5.7;
-      moonFall['actor1']= "Teo Halm";
-      moonFall['actor2']=  "Ella Wahlesdt";
-      moonFall['actor3']= "Reese Hartwig";
-      moonFall['actor1Image']= "teo.jpg";
-      moonFall['actor2Image']= "Ella.jpeg";
-      moonFall['actor3Image']= "Resse.jpg";
-      moonFall['time']= '1h 31m';
+      moonFall['MovieLength'] =  "1h 33m";
+      moonFall['Rating']= 6.7;
+      moonFall['actor1']= "Woody Allen";
+      moonFall['actor2']=  "Diane keaton";
+      moonFall['actor3']= "Tony Roberts";
+      moonFall['actor1Image']= "woody.jpg";
+      moonFall['actor2Image']= "Diane.jpg";
+      moonFall['actor3Image']= "Tony.jpg";
+      moonFall['time']= '1h 33m';
       moonFall["revenue"] = "\$45.3 million";
-      moonFall["watch"] = "Hulu";
-      moonFall["director"] = "Dave Green";
-      moonFall["overview"] =  "After a construction project begins in their neighborhood, best friends Tuck (Brian \"Astro\" Bradley), Alex (Teo Halm) and Munch (Reese C. Hartwig) begin receiving strange, encoded messages on their cell phones. They immediately inform their parents and the authorities, but when no one takes them seriously, the youths decide to crack the code themselves and trace the messages to their source. The youths' curiosity leads them to a robotic extraterrestrial who desperately needs their help.";
+      moonFall["watch"] = "Prime Video";
+      moonFall["director"] = "Woody Allen";
+      moonFall["overview"] =  "Alvy Singer, a divorced Jewish comedian, reflects on his relationship with ex-lover Annie Hall, an aspiring nightclub singer, which ended abruptly just like his previous marriages.";
     }
 
     if(Name == "The Jerk"){
       moonFall['image'] = "theJerk.jpg";
       moonFall['MovieName']=  "The Jerk";
-      moonFall['MovieLength'] =  "1h 31m";
-      moonFall['Rating']= 5.7;
-      moonFall['actor1']= "Teo Halm";
-      moonFall['actor2']=  "Ella Wahlesdt";
-      moonFall['actor3']= "Reese Hartwig";
-      moonFall['actor1Image']= "teo.jpg";
-      moonFall['actor2Image']= "Ella.jpeg";
-      moonFall['actor3Image']= "Resse.jpg";
-      moonFall['time']= '1h 31m';
+      moonFall['MovieLength'] =  "1h 34m";
+      moonFall['Rating']= 7.1;
+      moonFall['actor1']= "Steve Martin";
+      moonFall['actor2']=  "Bernadette";
+      moonFall['actor3']= "Catlin";
+      moonFall['actor1Image']= "Steve.jpg";
+      moonFall['actor2Image']= "Berna.jpg";
+      moonFall['actor3Image']= "Catlin.jpg";
+      moonFall['time']= '1h 34m';
       moonFall["revenue"] = "\$45.3 million";
-      moonFall["watch"] = "Hulu";
-      moonFall["director"] = "Dave Green";
-      moonFall["overview"] =  "After a construction project begins in their neighborhood, best friends Tuck (Brian \"Astro\" Bradley), Alex (Teo Halm) and Munch (Reese C. Hartwig) begin receiving strange, encoded messages on their cell phones. They immediately inform their parents and the authorities, but when no one takes them seriously, the youths decide to crack the code themselves and trace the messages to their source. The youths' curiosity leads them to a robotic extraterrestrial who desperately needs their help.";
+      moonFall["watch"] = "Prime";
+      moonFall["director"] = "Carl Reiner";
+      moonFall["overview"] =  "A simpleminded, sheltered country boy suddenly decides to leave his family home to experience life in the big city, where his naivete is both his best friend and his worst enemy.";
     }
+
 
     if(Name == "THE FALL"){
       moonFall['image'] = "Fall.jpeg";
       moonFall['MovieName']=  "THE FALL";
-      moonFall['MovieLength'] =  "1h 31m";
-      moonFall['Rating']= 5.7;
-      moonFall['actor1']= "Teo Halm";
-      moonFall['actor2']=  "Ella Wahlesdt";
-      moonFall['actor3']= "Reese Hartwig";
-      moonFall['actor1Image']= "teo.jpg";
-      moonFall['actor2Image']= "Ella.jpeg";
-      moonFall['actor3Image']= "Resse.jpg";
-      moonFall['time']= '1h 31m';
+      moonFall['MovieLength'] =  "1h 47m";
+      moonFall['Rating']= 6.4;
+      moonFall['actor1']= "Grace Caroline";
+      moonFall['actor2']=  "Virginia Gardner";
+      moonFall['actor3']= "Mason  Gooding";
+      moonFall['actor1Image']= "Grace.jpg";
+      moonFall['actor2Image']= "virginia.jpg";
+      moonFall['actor3Image']= "mason.jpg";
+      moonFall['time']= '1h 47m';
       moonFall["revenue"] = "\$45.3 million";
-      moonFall["watch"] = "Hulu";
-      moonFall["director"] = "Dave Green";
-      moonFall["overview"] =  "After a construction project begins in their neighborhood, best friends Tuck (Brian \"Astro\" Bradley), Alex (Teo Halm) and Munch (Reese C. Hartwig) begin receiving strange, encoded messages on their cell phones. They immediately inform their parents and the authorities, but when no one takes them seriously, the youths decide to crack the code themselves and trace the messages to their source. The youths' curiosity leads them to a robotic extraterrestrial who desperately needs their help.";
+      moonFall["watch"] = "Prime Video";
+      moonFall["director"] = "Scott Mann";
+      moonFall["overview"] =  "Best friends Becky and Hunter find themselves at the top of a 2,000-foot radio tower.";
     }
 
 
@@ -319,19 +316,19 @@ class Details extends StatelessWidget {
       developer.log('I am inside notebook');
       moonFall['image'] = "notebook.jpeg";
       moonFall['MovieName']=  "The Notebook";
-      moonFall['MovieLength'] =  "1h 31m";
-      moonFall['Rating']= 5.7;
-      moonFall['actor1']= "Teo Halm";
-      moonFall['actor2']=  "Ella Wahlesdt";
-      moonFall['actor3']= "Reese Hartwig";
-      moonFall['actor1Image']= "teo.jpg";
-      moonFall['actor2Image']= "Ella.jpeg";
-      moonFall['actor3Image']= "Resse.jpg";
-      moonFall['time']= '1h 31m';
+      moonFall['MovieLength'] =  "2h 3m";
+      moonFall['Rating']= 7.8;
+      moonFall['actor1']= "Gena Rowlands";
+      moonFall['actor2']=  "James Garner";
+      moonFall['actor3']= "Rachel McAdams";
+      moonFall['actor1Image']= "Gena.jpg";
+      moonFall['actor2Image']= "James.jpg";
+      moonFall['actor3Image']= "Rachel.jpg";
+      moonFall['time']= '2h 3m';
       moonFall["revenue"] = "\$45.3 million";
-      moonFall["watch"] = "Hulu";
-      moonFall["director"] = "Dave Green";
-      moonFall["overview"] =  "After a construction project begins in their neighborhood, best friends Tuck (Brian \"Astro\" Bradley), Alex (Teo Halm) and Munch (Reese C. Hartwig) begin receiving strange, encoded messages on their cell phones. They immediately inform their parents and the authorities, but when no one takes them seriously, the youths decide to crack the code themselves and trace the messages to their source. The youths' curiosity leads them to a robotic extraterrestrial who desperately needs their help.";
+      moonFall["watch"] = "Tubi";
+      moonFall["director"] = "Nick Cassavetes";
+      moonFall["overview"] =  "A poor yet passionate young man (Ryan Gosling) falls in love with a rich young woman (Rachel McAdams), giving her a sense of freedom, but they are soon separated because of their social differences";
     }
 
 
@@ -446,11 +443,9 @@ class Details extends StatelessWidget {
                 ),
               ),
 
-
               Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Padding(padding: EdgeInsets.all(8.0),),
                   new Image.asset(
                     'images/${moonFall['actor1Image']}',
                       width: 120.0,
