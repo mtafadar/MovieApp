@@ -1,4 +1,4 @@
-# mtafad2project2
+# A Movie App by Mosrour Tafadar
 
 A new Flutter project.
 
