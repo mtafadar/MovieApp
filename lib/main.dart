@@ -1,7 +1,199 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'displaydetail.dart';
+import 'detail.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
+
+final List<String> scifiName = const [
+  "Moonfall",
+  "Interstellar",
+  "Gravity",
+  "Earch to Echo"
+];
+
+final List<String> scifiMoviesImage = const [
+  "moonfall.jpeg",
+  "interstellar.jpeg",
+  "gravity.jpeg",
+  "earthToEcho.jpeg"
+];
+final List<String> ScifiMoviesSubtitle = const [
+  "It follows two former astronauts alongside a conspiracy theorist who discover the hidden truth about Earth's moon when it suddenly leaves its orbit",
+  "Interstellar is about Earth's last chance to find a habitable planet before a lack of resources causes the human race to go extinct",
+  "Two astronauts work together to survive after an accident leaves them stranded in space",
+  "\"Earth to Echo\" follows four young teenagers who find an alien life form that's trying to rebuild its spaceship",
+] ;
+final List<String> scifiMovieWikipedia = const [
+"https://en.wikipedia.org/wiki/Moonfall_(film)",
+ "https://en.wikipedia.org/wiki/Interstellar_(film)",
+  "https://en.wikipedia.org/wiki/Gravity",
+  "https://en.wikipedia.org/wiki/Earth_to_Echo"
+];
+
+final List<String> scifiMovieimdb = const [
+  "https://www.imdb.com/title/tt5834426/",
+  "https://www.imdb.com/title/tt0816692/?ref_=nv_sr_srsg_3",
+  "https://www.imdb.com/title/tt1454468/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt2183034/?ref_=nv_sr_srsg_0"
+];
+
+
+
+List<String> thriller = const  [
+  "Joker",
+  "The Da Vinci Code",
+  "The Hunger Games",
+  "Inception"
+];
+
+List<String> thrillerMovieImage = const  [
+  "joker.jpg",
+  "davinci.jpeg",
+  "hunger_games.webp",
+  "inception.jpeg"
+];
+
+final List<String> thrillerMoviesSubtitle = const [
+  "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City...",
+  "Robert Langdon, an American professor from Harvard, is awakened in the middle of the night by a phone call...",
+  "The nation of Panem is divided into 12 districts, ruled from the Capitol. As punishment for a failed revolt,...",
+  "Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams and steal their secrets from their subconscious...."
+];
+
+
+final List<String> thrillerMovieWikipedia = const [
+"https://en.wikipedia.org/wiki/Joker_(2019_film)",
+ "https://en.wikipedia.org/wiki/The_Da_Vinci_Code_(film)",
+ "https://en.wikipedia.org/wiki/The_Hunger_Games",
+ "https://en.wikipedia.org/wiki/Inception"
+];
+
+final List<String> thrillerMovieimdb = const [
+ "https://www.imdb.com/title/tt7286456/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt0382625/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt1392170/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt1375666/?ref_=nv_sr_srsg_0"
+];
+
+
+
+List<String> comedy = const  [
+  "This Is Spinal Tap",
+  "Airplane!",
+  "Annie Hall",
+  "The Jerk"
+];
+
+List<String> comedyMovieImage = const  [
+  "spinalTap.jpeg",
+  "airplane.jpg",
+  "AnnieHall.jpeg",
+  "theJerk.jpg"
+];
+
+
+List<String> comedyMovieSubTitle = const  [
+  "\"This Is Spinal Tap\" shines a light on the self-contained universe of a metal band struggling to get back on the charts, including everything from its complicated history of ups and downs",
+  "This spoof comedy takes shots at the slew of disaster movies that were released in the 70s",
+  "Comedian Alvy Singer (Woody Allen) examines the rise and fall of his relationship with struggling nightclub singer Annie Hall (Diane Keaton)",
+  "Navin (Steve Martin) believes he was born a poor black child in Mississippi. He is, however, actually white. Upon figuring this out, he heads north to St. Louis to find himself"
+];
+
+List<String> comedyMoviewikipwdia = const  [
+"https://en.wikipedia.org/wiki/Spinal_Tap_(band)",
+"https://en.wikipedia.org/wiki/Airplane!",
+"https://en.wikipedia.org/wiki/Annie_Hall",
+"https://en.wikipedia.org/wiki/The_Jerk"
+];
+
+List<String> comedyMovieimdb = const  [
+  "https://www.imdb.com/name/nm2346967/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt0080339/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt0075686/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt0079367/?ref_=nv_sr_srsg_0"
+];
+
+
+List<String> Fantasy = const  [
+  "THE FALL",
+  "SOLOMON KANE",
+  "CONAN",
+  "THE FORBIDDEN KINGDOM"
+];
+
+
+
+
+List<String> FantasyMovieImage = const  [
+  "Fall.jpeg",
+  "solomon.webp",
+  "conan.jpg",
+  "forbiddenkingdom.jpeg"
+];
+
+List<String> FantasyMovieSubtitle = const  [
+  "For best friends Becky and Hunter, life is all about conquering fears and pushing limits. However, after they climb 2,000 feet to the top of a remote, abandoned radio tower, they find themselves stranded with no way down.",
+  "David's son (Ben Cross) inherits his father's kingdom of Israel and gains respect for his wisdom and sense of justice.",
+  "Orphaned boy Conan (Arnold Schwarzenegger) is enslaved after his village is destroyed by the forces of vicious necromancer Thulsa Doom (James Earl Jones), and is compelled to push \"The Wheel of Pain\" for many years.",
+  "While rummaging around for some bootleg kung-fu DVDs in a pawn shop in Boston's Chinatown, Jason discovers an ancient golden staff"
+];
+
+
+
+List<String> FantasyWikipeia = const  [
+  "https://en.wikipedia.org/wiki/Fall_(2022_film)",
+  "https://en.wikipedia.org/wiki/Solomon_Kane_(film)",
+  "https://en.wikipedia.org/wiki/Conan_the_Barbarian_(1982_film)",
+  "https://en.wikipedia.org/wiki/The_Forbidden_Kingdom"
+];
+
+List<String> Fantasyimdb = const  [
+  "https://www.imdb.com/title/tt15325794/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt0970452/?ref_=nv_sr_srsg_0"
+  "https://www.imdb.com/title/tt0816462/?ref_=nv_sr_srsg_5",
+  "https://www.imdb.com/title/tt0865556/?ref_=nv_sr_srsg_0"
+];
+
+
+List<String> Romance = const  [
+  "The Notebook",
+  "Love Jones",
+  "Casablanca",
+  "Pride & Prejudice"
+];
+
+List<String> RomanceMovieImage = const  [
+  "notebook.jpeg",
+  "loveJones.jpeg",
+  "casblanca.webp",
+  "prideP.jpeg"
+];
+
+
+List<String> RomanceMovieSubtitle = const  [
+  "In 1940s South Carolina, mill worker Noah Calhoun (Ryan Gosling) and rich girl Allie (Rachel McAdams) are desperately in love. But her parents don't approve",
+  "Two urban African-Americans, Darius (Larenz Tate), an aspiring writer, and Nina (Nia Long), an aspiring photographer, share an instant connection after a chance meeting at a Chicago club",
+  "Rick Blaine (Humphrey Bogart), who owns a nightclub in Casablanca, discovers his old flame Ilsa (Ingrid Bergman) is in town with her husband, Victor Laszlo (Paul Henreid).",
+  "A story of love and life among the landed English gentry during the Georgian era. Mr. Bennet is a gentleman living in Hertfordshire with his overbearing wife and five daughters..."
+];
+
+
+List<String> RomanceWikipedia = const  [
+  "https://en.wikipedia.org/wiki/The_Notebook",
+  "https://en.wikipedia.org/wiki/Love_Jones_(film)",
+  "https://en.wikipedia.org/wiki/Casablanca_(film)",
+  "https://en.wikipedia.org/wiki/Pride_%26_Prejudice_(2005_film)"
+  ];
+
+
+List<String> Romanceimdb = const  [
+  "https://www.imdb.com/title/tt0332280/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt0119572/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt0034583/?ref_=nv_sr_srsg_0",
+  "https://www.imdb.com/title/tt0414387/?ref_=nv_sr_srsg_0"
+];
+
 
 
 
@@ -21,122 +213,11 @@ class MyApp extends StatelessWidget {
 
 class Sliver extends StatefulWidget {
   const Sliver({super.key});
-  _SliverExample createState()  => _SliverExample();
+  _Sliver createState()  => _Sliver();
 }
 
 
-class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin {
-
-  final List<String> scifiName = const [
-    "Moonfall",
-    "Interstellar",
-    "Gravity",
-    "Earch to Echo"
-  ];
-
-  final List<String> scifiMoviesImage = const [
-    "moonfall.jpeg",
-    "interstellar.jpeg",
-    "gravity.jpeg",
-    "earthToEcho.jpeg"
-  ];
-
-  final List<String> ScifiMoviesSubtitle = const [
-    "It follows two former astronauts alongside a conspiracy theorist who discover the hidden truth about Earth's moon when it suddenly leaves its orbit",
-    "Interstellar is about Earth's last chance to find a habitable planet before a lack of resources causes the human race to go extinct",
-    "Two astronauts work together to survive after an accident leaves them stranded in space",
-    "\"Earth to Echo\" follows four young teenagers who find an alien life form that's trying to rebuild its spaceship",
-  ] ;
-
-  List<String> thriller = const  [
-    "Joker",
-    "The Da Vinci Code",
-    "The Hunger Games",
-    "Inception"
-  ];
-
-
-  List<String> thrillerMovieImage = const  [
-    "joker.jpg",
-    "davinci.jpeg",
-    "hunger_games.webp",
-    "inception.jpeg"
-  ];
-
-
-  final List<String> thrillerMoviesSubtitle = const [
-    "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City...",
-    "Robert Langdon, an American professor from Harvard, is awakened in the middle of the night by a phone call...",
-    "The nation of Panem is divided into 12 districts, ruled from the Capitol. As punishment for a failed revolt,...",
-    "Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams and steal their secrets from their subconscious...."
-    ];
-
-
-  List<String> comedy = const  [
-    "This Is Spinal Tap",
-    "Airplane!",
-    "Annie Hall",
-    "The Jerk"
-    ];
-
-  List<String> comedyMovieImage = const  [
-    "spinalTap.jpeg",
-    "airplane.jpg",
-    "AnnieHall.jpeg",
-    "theJerk.jpg"
-  ];
-
-  List<String> comedyMovieSubTitle = const  [
-    "\"This Is Spinal Tap\" shines a light on the self-contained universe of a metal band struggling to get back on the charts, including everything from its complicated history of ups and downs",
-    "This spoof comedy takes shots at the slew of disaster movies that were released in the 70s",
-    "Comedian Alvy Singer (Woody Allen) examines the rise and fall of his relationship with struggling nightclub singer Annie Hall (Diane Keaton)",
-    "Navin (Steve Martin) believes he was born a poor black child in Mississippi. He is, however, actually white. Upon figuring this out, he heads north to St. Louis to find himself"
-  ];
-
-
-
-  List<String> Fantasy = const  [
-    "THE FALL",
-    "SOLOMON KANE",
-    "CONAN ",
-    "THE FORBIDDEN KINGDOM"
-  ];
-
-  List<String> FantasyMovieImage = const  [
-    "Fall.jpeg",
-    "solomon.webp",
-     "conan.jpg",
-    "forbiddenkingdom.jpeg"
-  ];
-
-  List<String> FantasyMovieSubtitle = const  [
-    "For best friends Becky and Hunter, life is all about conquering fears and pushing limits. However, after they climb 2,000 feet to the top of a remote, abandoned radio tower, they find themselves stranded with no way down.",
-    "David's son (Ben Cross) inherits his father's kingdom of Israel and gains respect for his wisdom and sense of justice.",
-    "Orphaned boy Conan (Arnold Schwarzenegger) is enslaved after his village is destroyed by the forces of vicious necromancer Thulsa Doom (James Earl Jones), and is compelled to push \"The Wheel of Pain\" for many years.",
-    "While rummaging around for some bootleg kung-fu DVDs in a pawn shop in Boston's Chinatown, Jason discovers an ancient golden staff"
-  ];
-
-  List<String> Romance = const  [
-  "The Notebook",
-   "Love Jones",
-    "Casablanca",
-    "Pride & Prejudice"
-  ];
-
-  List<String> RomanceMovieImage = const  [
-    "notebook.jpeg",
-    "loveJones.jpeg",
-    "casblanca.webp",
-    "prideP.jpeg"
-  ];
-
-  List<String> RomanceMovieSubtitle = const  [
-    "In 1940s South Carolina, mill worker Noah Calhoun (Ryan Gosling) and rich girl Allie (Rachel McAdams) are desperately in love. But her parents don't approve",
-    "Two urban African-Americans, Darius (Larenz Tate), an aspiring writer, and Nina (Nia Long), an aspiring photographer, share an instant connection after a chance meeting at a Chicago club",
-    "Rick Blaine (Humphrey Bogart), who owns a nightclub in Casablanca, discovers his old flame Ilsa (Ingrid Bergman) is in town with her husband, Victor Laszlo (Paul Henreid).",
-    "A story of love and life among the landed English gentry during the Georgian era. Mr. Bennet is a gentleman living in Hertfordshire with his overbearing wife and five daughters..."
-  ];
-
+class _Sliver extends State<Sliver> with  SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
@@ -198,13 +279,12 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
 
                            child: GestureDetector (
                              onLongPressStart: (LongPressStartDetails details){
-                               _popup(details.globalPosition, scifiName, index, scifiName[index]);
+                               _popup(details.globalPosition, scifiName, index, scifiName[index], scifiMovieWikipedia,scifiMovieimdb );
                              },
 
                              child: ListTile(
                                contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                                leading: _buildLeadingTile(index, scifiMoviesImage ),
-
 
                                title: Padding(
                                  padding: const EdgeInsets.only(bottom: .0),
@@ -226,6 +306,11 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                                  color: Colors.pink,
                                  size: 24.0,
                                ),
+                               onTap:  () {
+                                 ImageShowF(scifiMoviesImage[index], scifiName[index]);
+                               },
+
+
                              )
                              ,),);
 
@@ -269,7 +354,7 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
 
                             child: GestureDetector (
                               onLongPressStart: (LongPressStartDetails details){
-                                _popup(details.globalPosition, thriller, index, thriller[index]);
+                                _popup(details.globalPosition, thriller, index, thriller[index], thrillerMovieWikipedia, thrillerMovieimdb);
                               },
 
                               child: ListTile(
@@ -297,6 +382,11 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                                   color: Colors.pink,
                                   size: 24.0,
                                 ),
+
+                                onTap:  () {
+                                  ImageShowF(thrillerMovieImage[index], thriller[index]);
+                                },
+
                               )
                               ,),);
 
@@ -304,11 +394,6 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                 },
                 childCount: 1,
               )),
-
-
-
-
-
           Header(Colors.indigo, "Comedy",),
           SliverList(
               delegate: SliverChildBuilderDelegate(
@@ -342,14 +427,12 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
 
                             child: GestureDetector (
                               onLongPressStart: (LongPressStartDetails details){
-                                _popup(details.globalPosition, comedy, index, comedy[index]);
+                                _popup(details.globalPosition, comedy, index, comedy[index], comedyMoviewikipwdia , comedyMovieimdb);
                               },
 
                               child: ListTile(
                                 contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                                 leading: _buildLeadingTile(index, comedyMovieImage),
-
-
                                 title: Padding(
                                   padding: const EdgeInsets.only(bottom: .0),
                                   child: Text(comedy[index],
@@ -370,6 +453,9 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                                   color: Colors.pink,
                                   size: 24.0,
                                 ),
+                                onTap:  () {
+                                  ImageShowF(comedyMovieImage[index], comedy[index]);
+                                },
                               )
                               ,),);
 
@@ -377,8 +463,6 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                 },
                 childCount: 1,
               )),
-
-
 
 
           Header(Colors.blueGrey, "Fantasy",),
@@ -414,9 +498,8 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
 
                             child: GestureDetector (
                               onLongPressStart: (LongPressStartDetails details){
-                                _popup(details.globalPosition, Fantasy, index, Fantasy[index]);
+                                _popup(details.globalPosition, Fantasy, index, Fantasy[index], FantasyWikipeia, Fantasyimdb);
                               },
-
                               child: ListTile(
                                 contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                                 leading: _buildLeadingTile(index, FantasyMovieImage),
@@ -442,6 +525,10 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                                   color: Colors.pink,
                                   size: 24.0,
                                 ),
+
+                                onTap:  () {
+                                  ImageShowF(FantasyMovieImage[index], Fantasy[index]);
+                                },
                               )
                               ,),);
 
@@ -449,7 +536,6 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                 },
                 childCount: 1,
               )),
-
 
 
 
@@ -483,12 +569,10 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                                 ),
                                 borderRadius: BorderRadius.circular(25.0)
                             ),
-
                             child: GestureDetector (
                               onLongPressStart: (LongPressStartDetails details){
-                                _popup(details.globalPosition,  Romance, index,  Romance[index]);
+                                _popup(details.globalPosition,  Romance, index,  Romance[index], RomanceWikipedia, Romanceimdb);
                               },
-
                               child: ListTile(
                                 contentPadding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                                 leading: _buildLeadingTile(index,  RomanceMovieImage),
@@ -514,6 +598,9 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                                   color: Colors.pink,
                                   size: 24.0,
                                 ),
+                                onTap:  () {
+                                  ImageShowF(RomanceMovieImage[index], Romance[index]);
+                                },
                               )
                               ,),);
 
@@ -521,8 +608,6 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
                 },
                 childCount: 1,
               )),
-
-
         ],
       )
     );
@@ -552,15 +637,35 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
   }
 
 
+  void ImageShowF(String movImage, String movName){
+    Navigator.of(context).push(
+        MaterialPageRoute(builder: (_){
+          return ImageShow(movImage, movName);
+        },
+        )
+    );
+  }
+
+  void _launchURLimdb(index, List<String> imdb) async {
+    final _url =  imdb[index];
+    if (await canLaunch(_url)) {
+      await launch(_url);
+    } else {
+      throw 'could not launch $_url';
+    }
+  }
+
+  void _launchURLWikipedia(index, List<String> wikipedia) async {
+    final _url = wikipedia[index];
+    if (await canLaunch(_url)) {
+      await launch(_url);
+    } else {
+      throw 'could not launch $_url';
+    }
+  }
 
 
-
-
-
-
-
-
-  _popup(Offset offset, List<String> movName, int index, String name) async {
+  _popup(Offset offset, List<String> movName, int index, String name,List<String> Wikipedia, List<String> imdb, ) async {
     final screenSize = MediaQuery.of(context).size;
     double left = offset.dx;
     double top = offset.dy;
@@ -590,36 +695,29 @@ class _SliverExample extends State<Sliver> with  SingleTickerProviderStateMixin 
             value: 2,
             child: Row(
               children: [
-                Icon(Icons.screen_share_sharp),
+                Icon(Icons.screen_search_desktop_outlined),
                 Text(" IMDb"),
               ],
             )),
       ],
       elevation: 8.0,
     );
-
-
     if (selected == 0) {
-      displayDetail( index, name);
+      detailsofTheMovie( index, name);
     } else if (selected == 1){
-      print('Wikipedia');
+      _launchURLWikipedia(index,Wikipedia);
     } else {
-      print('IMDB');
+      _launchURLimdb(index,imdb);
     }
     // following instructions.....
   }
 
 
-
-
-
-
-
-  void displayDetail( int index, String Name){
+  void detailsofTheMovie( int index, String Name){
     // Different method of switching to another page and passing information so it can return a widget
     Navigator.of(context).push(
         MaterialPageRoute(builder: (_){
-          return DisplayDetails(index, Name);
+          return Details(index, Name);
         },
         )
     );
@@ -643,6 +741,8 @@ class Header extends StatelessWidget{
     );
   }
 }
+
+
 
 class Delegate extends SliverPersistentHeaderDelegate {
   final Color backgroundColor;
@@ -680,4 +780,32 @@ class Delegate extends SliverPersistentHeaderDelegate {
     return false;
   }
 }
+
+
+
+class ImageShow extends StatelessWidget {
+ final String MovieName;
+ final String MovieImage;
+ ImageShow(this.MovieImage, this.MovieName);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title:  Text(MovieName),
+        centerTitle: true,
+      ),
+      body:  Image(
+        image: AssetImage('images/${MovieImage}'),
+        fit: BoxFit.cover,
+        height: double.infinity,
+        width: double.infinity,
+        alignment: Alignment.center,
+      ),
+    );
+  }
+
+}
+
+
 
